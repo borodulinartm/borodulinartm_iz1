@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
         sizes[i - 1] = atoi(argv[i]);
     }
 
-    // Создаём массив указателей
+    // Создаём массив векторов
     dynamic_array_t dynamic_array[SIZE_MASS];
 
     // Заполняем его

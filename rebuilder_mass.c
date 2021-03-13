@@ -12,7 +12,7 @@ void print_mass(dynamic_array_t *data) {
 dynamic_array_t *rebuild_mass(dynamic_array_t *data, size_t new_size) {
     printf("%zu\n", new_size);
     for(size_t i = 0; i < SIZE_MASS; ++i) {
-        data[i].mass = realloc(data[i].mass, new_size * sizeof(int));
+        data[i].mass = (int*)realloc(data[i].mass, new_size * sizeof(int));
 
         for(size_t j = data[i].size_mass; j < new_size; ++j) {
             data[i].mass[j] = 0;

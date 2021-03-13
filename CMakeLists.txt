@@ -3,4 +3,21 @@ project(borodulinartm_iz1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(borodulinartm_iz1 main.c rebuilder_mass.c)
+set(LIB_SOURCE_FILES rebuilder_mass.c)
+add_library(study_std_lib ${LIB_SOURCE_FILES})
+add_executable(prog main.c)
+target_link_libraries(prog study_std_lib)
+
+# gtest libs
+enable_testing()
+find_package(GTest REQUIRED)
+
+# adds the gtest directory
+include_directories(${GTEST_INCLUDE_DIRS})
+message(${GTEST_LIBRARIES})
+
+# add tests
+add_executable(tests tests.cpp)
+
+target_link_libraries(tests ${GTEST_LIBRARIES} -lpthread)
+target_link_libraries(tests study_std_lib)

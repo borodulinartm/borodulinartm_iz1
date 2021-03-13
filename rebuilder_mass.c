@@ -10,7 +10,6 @@ void print_mass(dynamic_array_t *data) {
 }
 
 dynamic_array_t *rebuild_mass(dynamic_array_t *data, size_t new_size) {
-    printf("%zu\n", new_size);
     for(size_t i = 0; i < SIZE_MASS; ++i) {
         data[i].mass = (int*)realloc(data[i].mass, new_size * sizeof(int));
 
@@ -38,10 +37,7 @@ int input_data(dynamic_array_t *data, int *sizes_of_vectors) {
 
         for (size_t j = 0; j < sizes_of_vectors[i]; ++j) {
             data[i].mass[j] = (int) i + 1;
-            printf("%d ", data[i].mass[j]);
         }
-
-        printf("\n");
     }
     return max_size;
 }

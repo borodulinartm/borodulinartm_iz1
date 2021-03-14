@@ -1,1 +1,0 @@
-# borodulinartm_iz1

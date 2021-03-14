@@ -1,5 +1,5 @@
-#ifndef BORODULINARTM_IZ1_REBUILDER_MASS_H
-#define BORODULINARTM_IZ1_REBUILDER_MASS_H
+#ifndef CODE_REBUILDER_MASS_H_
+#define CODE_REBUILDER_MASS_H_
 
 #define SIZE_MASS 5
 
@@ -14,9 +14,9 @@ typedef struct dynamic_array {
     int *mass;
 } dynamic_array_t;
 
-// Вывод массива
+//  Вывод массива
 void print_mass(dynamic_array_t *data);
 int input_data(dynamic_array_t *data, int *sizes_of_vectors);
 dynamic_array_t *rebuild_mass(dynamic_array_t *data, size_t new_size);
 
-#endif //BORODULINARTM_IZ1_REBUILDER_MASS_H
+#endif  // CODE_REBUILDER_MASS_H_
